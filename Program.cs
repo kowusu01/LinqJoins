@@ -5,6 +5,9 @@
 ///  - inner join
 ///  - left outer join
 ///  - select records on the left with no match on the right
+///  
+/// - resources
+///   https://visualstudiomagazine.com/articles/2017/02/01/joining-with-linq.aspx
 /// 
 /////////////////////////////////////////////////////////////////////////
 using System.Linq;
