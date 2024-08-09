@@ -17,26 +17,26 @@ using System.Collections.Generic;
 #region setup data
 var customers = new List<Customer>
 {
-    new Customer { CustomerId = 1,  Name = "Bob Lesman", City = "Chicago" },
-    new Customer {  CustomerId = 2,Name = "Joe Stevens", City = "Chicago" },
-    new Customer {  CustomerId = 3,Name = "Merry Smith", City = "Chicago" },
-    new Customer {  CustomerId = 4,Name = "Sue Lin", City = "New York" },
-    new Customer {  CustomerId = 5,Name = "Jose Gonzalez", City = "New York" },
-    new Customer {  CustomerId = 6,Name = "Nathan Jones", City = "New York" },
-    new Customer { CustomerId = 7, Name = "Jane Doe", City = "Seattle" },
-    new Customer {  CustomerId = 8,Name = "Sammy Adams", City = "Seattle" },
-    new Customer {  CustomerId = 9,Name = "Ed Wards", City = "Seattle" }
+    new () { CustomerId = 1,  Name = "Bob Lesman", City = "Chicago" },
+    new () {  CustomerId = 2,Name = "Joe Stevens", City = "Chicago" },
+    new (){  CustomerId = 3,Name = "Merry Smith", City = "Chicago" },
+    new () {  CustomerId = 4,Name = "Sue Lin", City = "New York" },
+    new () {  CustomerId = 5,Name = "Jose Gonzalez", City = "New York" },
+    new () {  CustomerId = 6,Name = "Nathan Jones", City = "New York" },
+    new () { CustomerId = 7, Name = "Jane Doe", City = "Seattle" },
+    new () {  CustomerId = 8,Name = "Sammy Adams", City = "Seattle" },
+    new () {  CustomerId = 9,Name = "Ed Wards", City = "Seattle" }
 };
 
 var orders = new List<Order>
 {
-    new Order { OrderId = 1, CustomerId = 1, Item = "Shoes" },
-    new Order { OrderId = 2, CustomerId = 1, Item = "Headphones" },
-    new Order { OrderId = 3, CustomerId = 1, Item = "Bat" },
-    new Order { OrderId = 4, CustomerId = 2, Item = "Gloves" },
-    new Order { OrderId = 5, CustomerId = 3, Item = "Shirt" },
-    new Order { OrderId = 6, CustomerId = 4, Item = "Hat" },
-    new Order { OrderId = 7, CustomerId = 4, Item = "Socks" },
+    new() { OrderId = 1, CustomerId = 1, Item = "Shoes" },
+    new () { OrderId = 2, CustomerId = 1, Item = "Headphones" },
+    new () { OrderId = 3, CustomerId = 1, Item = "Bat" },
+    new () { OrderId = 4, CustomerId = 2, Item = "Gloves" },
+    new () { OrderId = 5, CustomerId = 3, Item = "Shirt" },
+    new () { OrderId = 6, CustomerId = 4, Item = "Hat" },
+    new () { OrderId = 7, CustomerId = 4, Item = "Socks" },
 };
 
 #endregion
@@ -76,7 +76,7 @@ foreach (var i in invoice2)
 
 
 // customers with no orders
-// - same add a whre clause to filter the intermediate object
+// - same add a where clause to filter the intermediate object
 // - we select the only when the join did not match anything
 var invoice3 = from cust in customers
                join o in orders on cust.CustomerId equals o.CustomerId
